@@ -55,7 +55,7 @@ table {
 /*color variable */
 @main-color: #999;
 @section-color: #54AFE4;
-@text-ccolor: #000;
+@text-color: #000;
 
 html, body {
 	height: 100%;
@@ -102,20 +102,20 @@ html, body {
 	
 	.email ,
 	.phone {
-	  color: #999;
+	  color: @main-color;
 	  font-weight: 300;
 	} 
 	
 	.separator {
 	  height: 10px;
-	  display: inline-block;
-	  border-left: 2px solid #999;
+	  display: flex;
+	  border-left: 2px solid @main-color;
 	  margin: 0px 10px;
 	}
 	
 	.position {
 	  font-weight: bold;
-	  display: inline-block;
+	  display: flex;
 	  margin-right: 10px;
 	  text-decoration: underline;
 	}
@@ -135,7 +135,7 @@ html, body {
 	
 	.section__title {
 	  letter-spacing: 2px;
-	  color: #54AFE4;
+	  color: @section-color;
 	  font-weight: bold;
 	  margin-bottom: 10px;
 	  text-transform: uppercase;
@@ -151,17 +151,20 @@ html, body {
 	
 	.left ,
 	.right {
-	  vertical-align: top;
-	  display: inline-block;
+	  
+		display: flex;
+		
 	}
 	
 	.left {
-	  width: 60%;    
+		width: 60%;   
+		justify-content: left;
 	}
 	
 	.right {
-	  tex-align: right;
-	  width: 39%;    
+		text-align: right;
+		width: 39%;  
+		justify-content: right;
 	}
 	
 	.name {
@@ -170,40 +173,17 @@ html, body {
 	
 	a {
 	  text-decoration: none;
-	  color: #000;
+	  color: @text-color;
 	  font-style: italic;
 	}
 	
 	a:hover {
 	  text-decoration: underline;
-	  color: #000;
+	  color: @text-color;
 	}
 	
-	.skills {
 	  
-	}
 	  
-	.skills__item {
-	  margin-bottom: 10px;  
-	}
-	
-	.skills__item .right {
-	  input {
-		display: none;
-	  }
-	  
-	  label {
-		display: inline-block;  
-		width: 20px;
-		height: 20px;
-		background: #C3DEF3;
-		border-radius: 20px;
-		margin-right: 3px;
-	  }
-	  
-	  input:checked + label {
-		background: #79A9CE;
-	  }
 	}
   }
 

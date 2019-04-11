@@ -130,6 +130,7 @@ table {
 * {
   box-sizing: border-box;
 }
+/*color variable */
 html,
 body {
   height: 100%;
@@ -174,13 +175,13 @@ body {
 }
 .header .separator {
   height: 10px;
-  display: inline-block;
+  display: flex;
   border-left: 2px solid #999;
   margin: 0px 10px;
 }
 .header .position {
   font-weight: bold;
-  display: inline-block;
+  display: flex;
   margin-right: 10px;
   text-decoration: underline;
 }
@@ -209,7 +210,7 @@ body {
 .details .left,
 .details .right {
   vertical-align: top;
-  display: inline-block;
+  display: flex;
 }
 .details .left {
   width: 60%;
@@ -237,7 +238,7 @@ body {
   display: none;
 }
 .details .skills__item .right label {
-  display: inline-block;
+  display: flex;
   width: 20px;
   height: 20px;
   background: #C3DEF3;
