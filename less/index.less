@@ -83,7 +83,7 @@ html, body {
 	margin-bottom: 30px;
 	
 	.full-name {
-	  font-size: 40px;
+	  font-size: 4rem;
 	  text-transform: uppercase;
 	  margin-bottom: 5px;
 	}
@@ -108,17 +108,27 @@ html, body {
 	
 	.separator {
 	  height: 10px;
-	  display: flex;
+	  display: inline-block;
 	  border-left: 2px solid @main-color;
 	  margin: 0px 10px;
 	}
 	
 	.position {
 	  font-weight: bold;
-	  display: flex;
+	  display: inline-block;
 	  margin-right: 10px;
 	  text-decoration: underline;
 	}
+		@media (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+				.full-name {
+					line-height: 20px;
+				}
+		}
   }
   
   
@@ -151,20 +161,21 @@ html, body {
 	
 	.left ,
 	.right {
-	  
-		display: flex;
-		
+		display: inline-block;
+		vertical-align: top;
+
 	}
 	
 	.left {
-		width: 60%;   
-		justify-content: left;
+		width: 60%; 
+		text-align: left;  
+	
 	}
 	
 	.right {
 		text-align: right;
 		width: 39%;  
-		justify-content: right;
+	
 	}
 	
 	.name {
@@ -185,5 +196,4 @@ html, body {
 	  
 	  
 	}
-  }
 

@@ -155,7 +155,7 @@ body {
   margin-bottom: 30px;
 }
 .header .full-name {
-  font-size: 40px;
+  font-size: 4rem;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
@@ -175,15 +175,26 @@ body {
 }
 .header .separator {
   height: 10px;
-  display: flex;
+  display: inline-block;
   border-left: 2px solid #999;
   margin: 0px 10px;
 }
 .header .position {
   font-weight: bold;
-  display: flex;
+  display: inline-block;
   margin-right: 10px;
   text-decoration: underline;
+}
+@media (max-width: 500px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .header .full-name {
+    line-height: 20px;
+  }
 }
 .details {
   line-height: 20px;
@@ -209,11 +220,12 @@ body {
 }
 .details .left,
 .details .right {
+  display: inline-block;
   vertical-align: top;
-  display: flex;
 }
 .details .left {
   width: 60%;
+  text-align: left;
 }
 .details .right {
   text-align: right;
@@ -230,21 +242,4 @@ body {
 .details a:hover {
   text-decoration: underline;
   color: #000;
-}
-.details .skills__item {
-  margin-bottom: 10px;
-}
-.details .skills__item .right input {
-  display: none;
-}
-.details .skills__item .right label {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background: #C3DEF3;
-  border-radius: 20px;
-  margin-right: 3px;
-}
-.details .skills__item .right input:checked + label {
-  background: #79A9CE;
 }
